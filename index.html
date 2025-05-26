@@ -158,20 +158,18 @@
         >Go to Instagram</a
       >
     </div>
-    <script>
-      // Acceptable referrers (with or without trailing slash, or extra params)
-      const validRefs = [
-        "https://www.instagram.com/v.a.r.d.h.a.n_08",
-        "https://instagram.com/v.a.r.d.h.a.n_08",
-      ];
-      let referrer = document.referrer;
-      referrer = referrer.split("?")[0].replace(/\/$/, ""); // Remove trailing slash and params
-
-      if (validRefs.includes(referrer)) {
-        document.getElementById("main-content").style.display = "block";
-      } else {
-        document.getElementById("locked-message").style.display = "block";
-      }
-    </script>
+   <script>
+  // Acceptable: any referrer containing your Instagram profile username
+  const ref = document.referrer.toLowerCase();
+  const valid = (
+    ref.includes("instagram.com/v.a.r.d.h.a.n_08") ||
+    ref.includes("instagram.com/v.a.r.d.h.a.n_08/")
+  );
+  if (valid) {
+    document.getElementById("main-content").style.display = "block";
+  } else {
+    document.getElementById("locked-message").style.display = "block";
+  }
+</script>
   </body>
 </html>
