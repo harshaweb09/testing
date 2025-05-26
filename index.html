@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vardhan | Exclusive Bio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(135deg, #8e54e9, #4776e6 100%);
+        min-height: 100vh;
+        margin: 0;
+        font-family: "Montserrat", Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        background: rgba(255, 255, 255, 0.96);
+        border-radius: 24px;
+        box-shadow: 0 8px 32px rgba(80, 30, 120, 0.13);
+        max-width: 350px;
+        width: 100%;
+        padding: 2.2em 1.5em 1.5em 1.5em;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .avatar {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #8e54e9;
+        margin-top: -80px;
+        box-shadow: 0 6px 22px rgba(140, 80, 220, 0.11);
+        background: #fff;
+      }
+      h1 {
+        margin: 1.3em 0 0.3em 0;
+        font-size: 2em;
+        font-weight: 700;
+        background: linear-gradient(90deg, #4776e6, #8e54e9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .insta {
+        font-size: 1.1em;
+        color: #8e54e9;
+        text-decoration: none;
+        font-weight: 600;
+        margin-bottom: 1em;
+        display: inline-block;
+      }
+      .bio {
+        color: #333;
+        font-size: 1.08em;
+        margin: 1em 0 2em 0;
+        line-height: 1.6;
+      }
+      .links {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        margin-bottom: 0.6em;
+      }
+      .btn {
+        background: linear-gradient(90deg, #8e54e9, #4776e6);
+        color: #fff;
+        padding: 0.7em 1.5em;
+        border: none;
+        border-radius: 22px;
+        font-size: 1em;
+        font-weight: 600;
+        cursor: pointer;
+        transition: box-shadow 0.2s, transform 0.2s;
+        box-shadow: 0 2px 12px rgba(90, 60, 150, 0.07);
+        text-decoration: none;
+        margin-top: 1em;
+        display: inline-block;
+      }
+      .btn:hover {
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 6px 24px rgba(140, 80, 220, 0.15);
+      }
+      .locked-message {
+        display: none;
+        color: #8e54e9;
+        font-size: 1.15em;
+        font-weight: 600;
+        padding: 2em 1em;
+      }
+      .locked-message a {
+        color: #fff;
+        background: linear-gradient(90deg, #8e54e9, #4776e6);
+        padding: 0.6em 1.3em;
+        border-radius: 20px;
+        text-decoration: none;
+        margin-top: 1em;
+        display: inline-block;
+        font-weight: 600;
+      }
+      @media (max-width: 420px) {
+        .container {
+          padding: 1.2em 0.4em 1em 0.4em;
+        }
+        .avatar {
+          width: 80px;
+          height: 80px;
+          margin-top: -55px;
+        }
+        h1 {
+          font-size: 1.4em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="main-content" style="display: none">
+      <img
+        class="avatar"
+        src="https://instagram.fhyd3-2.fna.fbcdn.net/v/t51.2885-19/432599268_2442876117388072_6839673559822255952_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fhyd3-2.fna.fbcdn.net&_nc_cat=110&_nc_ohc=4ASm7C3K0XUQ7kNvgF3gLr4&edm=AEF8tYYBAAAA&ccb=7-5&oh=00_AfA4U5vWv4K3pvR0M4JZL6dIBkM9D1qf6kXwlhfA5E9fRg&oe=665E1A51&_nc_sid=a9513d"
+        alt="Vardhan Instagram DP"
+      />
+      <h1>Vardhan</h1>
+      <a
+        href="https://www.instagram.com/v.a.r.d.h.a.n_08/"
+        class="insta"
+        target="_blank"
+        >@v.a.r.d.h.a.n_08</a
+      >
+      <div class="bio">
+        👋 Hey there!<br />
+        I’m Vardhan — Explorer | Tech Lover | Dreamer<br />
+        Welcome to my exclusive bio page! 🌟
+      </div>
+      <div class="links">
+        <a href="mailto:vardhan@example.com" class="btn">Email Me</a>
+        <a href="https://wa.me/919999999999" class="btn">WhatsApp</a>
+      </div>
+      <a
+        class="btn"
+        href="https://www.instagram.com/v.a.r.d.h.a.n_08/"
+        target="_blank"
+        >Follow me on Instagram</a
+      >
+    </div>
+    <div class="container locked-message" id="locked-message">
+      <span>🔒 Follow to Reveal Bio</span>
+      <p>
+        To view this page, please go to my Instagram profile and open the
+        website link in the bio.
+      </p>
+      <a href="https://www.instagram.com/v.a.r.d.h.a.n_08/" target="_blank"
+        >Go to Instagram</a
+      >
+    </div>
+    <script>
+      // Acceptable referrers (with or without trailing slash, or extra params)
+      const validRefs = [
+        "https://www.instagram.com/v.a.r.d.h.a.n_08",
+        "https://instagram.com/v.a.r.d.h.a.n_08",
+      ];
+      let referrer = document.referrer;
+      referrer = referrer.split("?")[0].replace(/\/$/, ""); // Remove trailing slash and params
+
+      if (validRefs.includes(referrer)) {
+        document.getElementById("main-content").style.display = "block";
+      } else {
+        document.getElementById("locked-message").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
